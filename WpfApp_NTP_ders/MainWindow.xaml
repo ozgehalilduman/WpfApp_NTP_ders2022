@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp_NTP_ders.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_NTP_ders"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="1000">
+    <Grid Background="#FF716D6D">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Background="#FF375D90">
+            <Grid Height="100" Background="White" Width="176">
+                <Image HorizontalAlignment="Left" Height="97" VerticalAlignment="Bottom" Width="122" Source="/indir.png"/>
+            </Grid>
+            <Button x:Name="Button_ogrenciler" Content="ÖĞRENCİLER" Height="27" Background="#FF5B7DAB" BorderBrush="{x:Null}" Foreground="White" FontFamily="Candara Light" FontSize="18" FontStyle="Normal" FontWeight="Normal" BorderThickness="5,0,0,0" Click="Button_ogrenciler_Click"/>
+            <Button x:Name="Button_okullar" Content="OKULLAR" Height="27" Background="#FF5B7DAB" BorderBrush="{x:Null}" Foreground="White" FontFamily="Candara Light" FontSize="18" FontStyle="Normal" FontWeight="Normal" BorderThickness="5,0,0,0"/>
+            <Button x:Name="Button_siniflar" Content="SINIFLAR" Height="27" Background="#FF5B7DAB" BorderBrush="{x:Null}" Foreground="White" FontFamily="Candara Light" FontSize="18" FontStyle="Normal" FontWeight="Normal" BorderThickness="5,0,0,0"/>
+        </StackPanel>
+        <Frame x:Name="frame_islemler" Grid.Column="1" Content="" NavigationUIVisibility="Hidden">
+            <Frame.Background>
+                <ImageBrush ImageSource="/indir.png" Stretch="None" TileMode="None" Opacity="0.1"/>
+            </Frame.Background>
+        </Frame>
+
+    </Grid>
+</Window>
