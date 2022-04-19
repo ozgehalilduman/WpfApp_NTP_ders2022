@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,7 @@ namespace WpfApp_NTP_ders
                 Datagrid_Ogrenciler.SelectedItem = null;
             Grid_yeni.Visibility = Visibility.Hidden;
             Button_yenikayit.IsEnabled = true;
+            ComboBox_yeni_sinif.SelectedIndex = -1;  
         }
         public OgrencilerPage()
         {            
@@ -42,13 +44,12 @@ namespace WpfApp_NTP_ders
             veriler.Ogrencis.Load();
             veriler.Sinifs.Load();
             veriler.Okuls.Load();
-            Sinif tumu=new Sinif();
-            tumu.Id = 0;
-            tumu.Sube = "Tümü";
-            veriler.Sinifs.Add(tumu);
-            ComboBox_FilterSinif.ItemsSource = veriler.Sinifs.Local.ToObservableCollection();
+            CheckBox_TumSinifGoster.IsChecked = true;   
+            ComboBox_FilterSinif.ItemsSource = veriler.Sinifs.Local.ToObservableCollection(); 
             Datagrid_Ogrenciler.ItemsSource = veriler.Ogrencis.Local.ToObservableCollection();
-            ComboBox_FilterSinif.SelectedItem = tumu;
+            //modal kısımdaki comboboxları dolduruyorum
+            ComboBox_yeni_sinif.ItemsSource = veriler.Sinifs.Local.ToObservableCollection();
+            ComboBox_guncelle_sinif.ItemsSource = veriler.Sinifs.Local.ToObservableCollection();
         }
 
         private void Button_yenikayit_Click(object sender, RoutedEventArgs e)
@@ -72,6 +73,7 @@ namespace WpfApp_NTP_ders
             yeni_ogr.Okulno = Int32.Parse(TextBox_yeni_okulno.Text);
             yeni_ogr.Ad = TextBox_yeni_ad.Text;
             yeni_ogr.Soyad = TextBox_yeni_soyad.Text;
+            yeni_ogr.Sinif = (Int32)ComboBox_yeni_sinif.SelectedValue;
             veriler.Ogrencis.Local.Add(yeni_ogr);
             veriler.SaveChanges();
             yenikayit_alan_temizle();
@@ -90,6 +92,7 @@ namespace WpfApp_NTP_ders
                 TextBox_guncelle_okulno.Text = secilen_ogr.Okulno.ToString();
                 TextBox_guncelle_ad.Text = secilen_ogr.Ad;
                 TextBox_guncelle_soyad.Text = secilen_ogr.Soyad;
+                ComboBox_guncelle_sinif.SelectedItem = secilen_ogr.SinifNavigation;
                 Button_yenikayit.IsEnabled = true;              
             }
         }
@@ -108,6 +111,7 @@ namespace WpfApp_NTP_ders
             secilen_ogr.Okulno = Int32.Parse(TextBox_guncelle_okulno.Text);
             secilen_ogr.Ad = TextBox_guncelle_ad.Text;
             secilen_ogr.Soyad = TextBox_guncelle_soyad.Text;
+            secilen_ogr.Sinif = (Int32)ComboBox_guncelle_sinif.SelectedValue;
             veriler.SaveChanges();
             Grid_guncelle.Visibility = Visibility.Hidden;
             Datagrid_Ogrenciler.SelectedItem = null;
@@ -134,7 +138,20 @@ namespace WpfApp_NTP_ders
         private void ComboBox_FilterSinif_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
-            
+            if(ComboBox_FilterSinif.SelectedIndex>-1)
+            {   CheckBox_TumSinifGoster.IsChecked =false;
+                Int32 secilen = (Int32) ComboBox_FilterSinif.SelectedValue; 
+                Datagrid_Ogrenciler.ItemsSource= veriler.Ogrencis.Local.ToObservableCollection().Where(x=>x.Sinif==secilen);
+            }            
+        }
+
+        private void CheckBox_TumSinifGoster_Checked(object sender, RoutedEventArgs e)
+        {
+            if (CheckBox_TumSinifGoster.IsChecked==true)
+            {
+                Datagrid_Ogrenciler.ItemsSource = veriler.Ogrencis.Local.ToObservableCollection();
+                ComboBox_FilterSinif.SelectedIndex = -1;
+            }
         }
     }
 }

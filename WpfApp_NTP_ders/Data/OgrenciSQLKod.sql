@@ -41,8 +41,9 @@ INSERT INTO Sinif(seviye,sube,okul) VALUES
     (9,'B',1),
     (9,'C',1),
     (10,'A',1),
-    (10,'B',1),
-    (10,'C',1)
+    (10,'B',2),
+    (10,'C',2),
+    (11,'A',3)
 
 INSERT INTO Ogrenci(okulno,ad,soyad,sinif) VALUES
     (100,'Ogrenci','Soyad',1),

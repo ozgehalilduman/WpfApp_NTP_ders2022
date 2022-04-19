@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_NTP_ders"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="1000">
+        Title="OGRENCİ TAKİP v0.1" Height="350" Width="1000">
     <Grid Background="#FF716D6D">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
