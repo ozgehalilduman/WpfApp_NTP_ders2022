@@ -118,7 +118,7 @@
                 </Grid>
             </Grid>
             <Label Content="SINIF" HorizontalAlignment="Left" Margin="10,1,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-            <ComboBox x:Name="ComboBox_FilterOkul" DisplayMemberPath="SinifAd" SelectedValuePath="Id" HorizontalAlignment="Left" Margin="53,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_FilterOkul_SelectionChanged"/>
+            <ComboBox x:Name="ComboBox_FilterOkul" DisplayMemberPath="KisaAd" SelectedValuePath="Id" HorizontalAlignment="Left" Margin="53,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_FilterOkul_SelectionChanged"/>
             <CheckBox x:Name="CheckBox_TumOkulGoster" Content="Tüm Okulları Göster" HorizontalAlignment="Left" Margin="190,8,0,0" Grid.Row="1" VerticalAlignment="Top" IsChecked="True" Checked="CheckBox_TumOkulGoster_Checked"/>
         </Grid>
 

@@ -57,7 +57,7 @@
                 </DataGrid>
             </Grid>
             <Grid x:Name="Grid_Modal" Background="#7F000000" Panel.ZIndex="1" Grid.RowSpan="2" >
-                <Grid x:Name="Grid_guncelle" Width="328" Visibility="Visible" Margin="0,80,0,0" HorizontalAlignment="Center" Height="200" VerticalAlignment="Top">
+                <Grid x:Name="Grid_guncelle" Width="328" Visibility="Hidden" Margin="0,80,0,0" HorizontalAlignment="Center" Height="200" VerticalAlignment="Top">
                     <Grid.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                             <GradientStop Color="#FF3DAD68"/>
@@ -76,7 +76,7 @@
                     <Label Content="TAM Ad:" HorizontalAlignment="Left" Margin="29,68,0,0" VerticalAlignment="Top" Width="98" FontSize="14" FontStyle="Italic" FontWeight="Normal" BorderThickness="0,0,0,1" BorderBrush="#FF584D4D" Height="26" HorizontalContentAlignment="Right"/>
                     <Label Content="MEVCUT:" HorizontalAlignment="Left" Margin="29,94,0,0" VerticalAlignment="Top" Width="98" FontSize="14" FontStyle="Italic" FontWeight="Normal" BorderThickness="0,0,0,1" BorderBrush="#FF584D4D" Height="30" HorizontalContentAlignment="Right" Grid.ColumnSpan="2"/>
                     <TextBox x:Name="TextBox_guncelle_kisaad" HorizontalAlignment="Left" Margin="0,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" Grid.Column="1"/>
-                    <TextBox x:Name="TextBox_guncelle_tamad" HorizontalAlignment="Left" Margin="0,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" Grid.Column="1"/>
+                    <TextBox x:Name="TextBox_guncelle_tamad" Margin="0,73,5,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" Grid.Column="1"/>
                     <TextBox x:Name="TextBox_guncelle_mevcut" HorizontalAlignment="Left" Margin="0,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14" Grid.Column="1"/>
                     <Button x:Name="Button_guncelle_kaydet" Content="Kaydet" HorizontalAlignment="Left" Margin="144,169,0,0" VerticalAlignment="Top" Width="61" RenderTransformOrigin="0.115,0.652" FontSize="14" FontStyle="Italic" Background="{x:Null}" BorderBrush="#FF1FC81A" BorderThickness="5,0,0,0" Grid.ColumnSpan="2" Click="Button_guncelle_kaydet_Click"/>
                     <Button x:Name="Button_guncelle_iptal" Content="İptal" HorizontalAlignment="Left" Margin="84,169,0,0" VerticalAlignment="Top" Width="61" RenderTransformOrigin="0.115,0.652" FontSize="14" FontStyle="Italic" Background="{x:Null}" BorderThickness="5,0,0,0" BorderBrush="#FFF70B0B" Grid.ColumnSpan="2" Click="Button_guncelle_iptal_Click"/>
@@ -110,7 +110,7 @@
                     <Label Content="Tam Ad:" HorizontalAlignment="Left" Margin="29,26,0,0" VerticalAlignment="Top" Width="98" FontSize="14" FontStyle="Italic" FontWeight="Normal" BorderThickness="0,0,0,1" BorderBrush="#FF584D4D" Height="26" Grid.Row="1" HorizontalContentAlignment="Right"/>
                     <Label Content="Mevcut:" HorizontalAlignment="Left" Margin="29,52,0,0" VerticalAlignment="Top" Width="98" FontSize="14" FontStyle="Italic" FontWeight="Normal" BorderThickness="0,0,0,1" BorderBrush="#FF584D4D" Height="30" Grid.Row="1" HorizontalContentAlignment="Right"/>
                     <TextBox x:Name="TextBox_yeni_kisaad" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
-                    <TextBox x:Name="TextBox_yeni_tamad" Grid.Column="1" HorizontalAlignment="Left" Margin="0,31,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
+                    <TextBox x:Name="TextBox_yeni_tamad" Margin="145,31,3,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14" Grid.ColumnSpan="2"/>
                     <TextBox x:Name="TextBox_yeni_mevcut" Grid.Column="1" HorizontalAlignment="Left" Margin="0,57,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="14"/>
                     <Button x:Name="Button_yeni_kaydet" Content="Kaydet" HorizontalAlignment="Left" Margin="144,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="61" RenderTransformOrigin="0.115,0.652" Grid.ColumnSpan="2" FontSize="14" FontStyle="Italic" Background="{x:Null}" BorderBrush="#FF1FC81A" BorderThickness="5,0,0,0" Click="Button_yeni_kaydet_Click"/>
                     <Button x:Name="Button_yeni_iptal" Content="İptal" HorizontalAlignment="Left" Margin="84,119,0,0" Grid.Row="1" VerticalAlignment="Top" Width="61" RenderTransformOrigin="0.115,0.652" FontSize="14" FontStyle="Italic" Background="{x:Null}" BorderThickness="5,0,0,0" BorderBrush="#FFF70B0B" Click="Button_yeni_iptal_Click"/>
