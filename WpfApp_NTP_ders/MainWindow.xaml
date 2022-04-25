@@ -16,8 +16,8 @@
                 <Image HorizontalAlignment="Left" Height="97" VerticalAlignment="Bottom" Width="122" Source="/indir.png"/>
             </Grid>
             <Button x:Name="Button_ogrenciler" Content="ÖĞRENCİLER" Height="27" Background="#FF5B7DAB" BorderBrush="{x:Null}" Foreground="White" FontFamily="Candara Light" FontSize="18" FontStyle="Normal" FontWeight="Normal" BorderThickness="5,0,0,0" Click="Button_ogrenciler_Click"/>
-            <Button x:Name="Button_okullar" Content="OKULLAR" Height="27" Background="#FF5B7DAB" BorderBrush="{x:Null}" Foreground="White" FontFamily="Candara Light" FontSize="18" FontStyle="Normal" FontWeight="Normal" BorderThickness="5,0,0,0"/>
-            <Button x:Name="Button_siniflar" Content="SINIFLAR" Height="27" Background="#FF5B7DAB" BorderBrush="{x:Null}" Foreground="White" FontFamily="Candara Light" FontSize="18" FontStyle="Normal" FontWeight="Normal" BorderThickness="5,0,0,0"/>
+            <Button x:Name="Button_okullar" Content="OKULLAR" Height="27" Background="#FF5B7DAB" BorderBrush="{x:Null}" Foreground="White" FontFamily="Candara Light" FontSize="18" FontStyle="Normal" FontWeight="Normal" BorderThickness="5,0,0,0" Click="Button_okullar_Click"/>
+            <Button x:Name="Button_siniflar" Content="SINIFLAR" Height="27" Background="#FF5B7DAB" BorderBrush="{x:Null}" Foreground="White" FontFamily="Candara Light" FontSize="18" FontStyle="Normal" FontWeight="Normal" BorderThickness="5,0,0,0" Click="Button_siniflar_Click"/>
         </StackPanel>
         <Frame x:Name="frame_islemler" Grid.Column="1" Content="" NavigationUIVisibility="Hidden">
             <Frame.Background>

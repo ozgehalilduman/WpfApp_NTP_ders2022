@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp_NTP_ders.Views;
 
 namespace WpfApp_NTP_ders
 {
@@ -32,6 +33,18 @@ namespace WpfApp_NTP_ders
         {
             OgrencilerPage ogrPage=new OgrencilerPage();
             frame_islemler.Navigate(ogrPage);
+        }
+
+        private void Button_okullar_Click(object sender, RoutedEventArgs e)
+        {
+            OkullarPage okulPage = new OkullarPage();
+            frame_islemler.Navigate(okulPage);
+        }
+
+        private void Button_siniflar_Click(object sender, RoutedEventArgs e)
+        {
+            SiniflarPage sinifPage = new SiniflarPage();
+            frame_islemler.Navigate(sinifPage);
         }
     }
 }
