@@ -118,11 +118,6 @@ namespace WpfApp_NTP_ders
             Datagrid_Ogrenciler.Items.Refresh();
         }
 
-        private void Button_kayitsil_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void Button_kayit_sil_Click(object sender, RoutedEventArgs e)
         {
             if (Datagrid_Ogrenciler.SelectedItem != null)
